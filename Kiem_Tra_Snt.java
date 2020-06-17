@@ -1,19 +1,26 @@
 package BUI_PHUC_HAU;
 
-public class Kiem_Tra_Snt {
-	public static boolean isPrime(int n) {
-	if (n <= 1) {
-        return false;
-    }
-    for (int i = 2; i <= Math.sqrt(n); i++) {
-        if (n % i == 0) {
-            return false;
-        }
-    }
-    return true;
-}
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-	}
+import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.Test;
+
+class TestSNT {
+	Kiem_Tra_Snt k=new Kiem_Tra_Snt();
+	@Test
+	void test1() {
+		assertEquals(k.isPrime(5),true);// Testing by Phau
+	}
+	@Test
+	void test2() {
+		assertEquals(k.isPrime(-1),true);// Testing by Phau
+	}
+	@Test
+	void test3() {
+		assertEquals(k.isPrime((1.25),true);// Testing by Phau
+	}
+	@Test
+	void test4() {
+		assertEquals(k.isPrime(10000),false);// Testing by Phau
+	}
+	
 }
